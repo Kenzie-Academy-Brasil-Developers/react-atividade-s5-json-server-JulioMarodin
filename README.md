@@ -1,6 +1,6 @@
 # json-server-base
 
-Esse é o repositório com a base de JSON-Server + JSON-Server-Auth já configurada, feita para ser usada no desenvolvimento das API's nos Capstones do Q2.
+Esse é o meu json server.
 
 ## Endpoints
 
@@ -9,16 +9,26 @@ Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/pack
 ### Cadastro
 
 POST /register <br/>
-POST /signup <br/>
-POST /users
+POST /login <br/>
+POST /vehicles <br/>
+POST /animals
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password.
-Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
-
+O register serve para cadastrar usuários.
+Vehicles serve para cadastrar novos veículos, no corpo apenas necessário model (modelo) e brand (marca). Necessário o token de login para a criação de um novo veículo.
+Animals serve para cadastrar novos animais, no corpo apoenas type, name e userID. Necessário o token de login para a criação de um novo animal.
 
 ### Login
 
-POST /login <br/>
-POST /signin
+POST /login
 
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+Endpoint usado para realizar login com um dos usuários cadastrados na lista de "Users".
+
+### Get
+
+GET /vehicles
+GET /users
+GET /animals
+
+Utilize o token de acesso para ver os veículos cadastrados.
+Utilize o token de acesso, e o id do usuário na barra de endereço para ver as informações do usuário.
+A requisição get animals não necessita de token.
