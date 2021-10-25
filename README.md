@@ -25,8 +25,8 @@ Endpoint usado para realizar login com um dos usuários cadastrados na lista de 
 
 ### Get
 
-GET /vehicles
-GET /users
+GET /vehicles <br/>
+GET /users <br/>
 GET /animals
 
 Utilize o token de acesso para ver os veículos cadastrados.
